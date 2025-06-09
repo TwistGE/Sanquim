@@ -5,6 +5,7 @@
   --Secundary-color:#FFD984;
   --Tertiary-color: #379090;
 
+  --FontSizeMenu: 1rem;
 }
 *{
   margin: 0;
@@ -56,7 +57,7 @@ header .container{
 .container .Menu_logo img{
   width: 100%;
 }
-.container navbar{
+.container .Menu_items{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +65,15 @@ header .container{
   height: 100%;
 }
 
-.container navbar li{
+.container .Menu_items ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.container .Menu_items li{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,32 +81,45 @@ header .container{
   position: relative;
   padding: .3rem 0;
   cursor: pointer;
+
 }
-.container navbar li:not(:nth-child(3)){
+.container .Menu_items li > i{
+  transform: translateY(15%);
+  margin-left: .3rem;
+}
+
+.container .Menu_items li > a,
+.Menu_items li .submenu a{
+  font-size: var(--FontSizeMenu);
+}
+.container .Menu_items li:not(:nth-child(5)){
   padding: .5rem 0;
 }
-.container navbar li:not(:nth-child(3))::after,
-.container navbar .Menu_profile_option:nth-child(n) a::after,button::after{
+.container .Menu_items li:not(.Menu_profile_item,.NoClick)::after,
+.container .Menu_items .submenu:nth-child(n) a::after,button::after{
   position: absolute;
   bottom: 0;
   left: 0;
   content: "";
-  height: 3px;
+  height: 2.5px;
   width: 0%;
   background-color: var(--Tertiary-color);
   transition: all ease-in-out .3s;
   transform: translateX(10%);
 }
 
-.container navbar li:not(:nth-child(3)):hover::after,
-.container navbar .Menu_profile_option:nth-child(n) a:hover::after,button:hover::after{
+.container .Menu_items li:not(:nth-child(n+4)):hover::after,
+.container .Menu_items .submenu:nth-child(n) a:hover::after,button:hover::after{
   width: 80%;
 }
-.container navbar li:nth-child(3){
+.container .Menu_items li:has(.submenu a:hover)::after {
+  width: 0%;
+}
+.container .Menu_items li:nth-child(n){
   display: block;
   flex-direction: row;
 }
-.container navbar .Menu_profile{
+.container .Menu_items .Menu_profile{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,41 +128,43 @@ header .container{
 }
 
 
-.container navbar .Menu_profile-icon{
+.container .Menu_items .Menu_profile-icon{
   width: 50px;
   height: 50px;
   overflow: hidden;
   border-radius: 50%;
   
 }
-.container navbar .Menu_profile-icon img{
+.container .Menu_items .Menu_profile-icon img{
   max-width: 100%;
 }
 
-.container navbar .Menu_profile_option{
+.container .Menu_items .submenu{
   display: none;
   position: absolute;
   flex-direction: column;
   transition: all 2s ease-in-out;
   cursor: pointer;
+  /* transform: translateY(80%); */
 }
-.container navbar li:nth-child(3):hover > .Menu_profile_option{
+.container .Menu_items li:nth-child(n):hover > .submenu{
   display: flex;
 }
 
-.container navbar li:nth-child(3) i{
+.container .Menu_items li:nth-child(n) i{
     transition: all .3s ease-in-out;
 }
-.container navbar li:nth-child(3):hover i{
+.container .Menu_items li:nth-child(n):not(:nth-child(:last-child)):hover i{
   transform: rotate(180deg);
 
 }
-.container navbar .Menu_profile_option:nth-child(n) button{
+.container .Menu_items .Menu_profile_option:nth-child(n) button{
   border: none;
   cursor: pointer;
   font-weight: 500;
+  font-size: var(--FontSizeMenu);
 }
-.container navbar .Menu_profile_option:nth-child(n) a,button{
+.container .Menu_items .submenu:nth-child(n) a,button{
   position: relative;
   padding: 1rem;
   background-color: var(--Primary-color);
@@ -148,9 +172,14 @@ header .container{
   transition: background-color .3s ease;
 }
 
+.container .Menu_items li > .inbox{
+  font-size: 1.5rem;
+  animation: transform ease-in-out .1s;
+}
 
-
-
+.container .Menu_items li > .inbox:hover{
+  transform: scale(1.1);
+}
 
 
 
