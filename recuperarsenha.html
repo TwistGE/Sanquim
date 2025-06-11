@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/styleLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="src/images/icone.jpg">
+    <title>Colégio Sanquim - Mogi Mirim</title>
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <form action="" id="formEmail" style="display: flex;">
+
+            <h3>Recuperação de conta</h3>
+            <br>
+            <div class="input-box">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <br>
+            <button>Enviar link</button>
+            <br>
+            <button id="formTipo" name="formTipo" onclick="mostrarFormulario(1)">
+                Tentar de outra forma
+            </button>
+        </form>
+
+        <form action="" id="formFone" style="display:none;">
+
+            <h3>Recuperação de conta</h3>
+            <br>
+            <div class="input-box">
+                <input type="text" name="fone" placeholder="Telefone">
+            </div>
+            <br>
+            <button>Enviar link</button>
+            <br>
+            <button id="formTipo" name="formTipo" onclick="mostrarFormulario(0)">
+                Tentar de outra forma
+            </button>
+        </form>
+
+            
+    </main>
+
+    <script>
+            function mostrarFormulario(tipo) {
+                event.preventDefault();
+                document.getElementById('formEmail').style.display = 'none';
+                document.getElementById('formFone').style.display = 'none';
+
+                if (tipo == 0) {
+                    document.getElementById('formEmail').style.display = 'flex';
+                } else if (tipo == 1){
+                    document.getElementById('formFone').style.display = 'flex';
+                }
+            }
+    </script> 
+
+</body>
+
+</html>
