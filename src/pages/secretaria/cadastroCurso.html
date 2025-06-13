@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro Curso</title>
+  <link rel="stylesheet" href="../../styles/Msecretaria.css" />
+  <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
+  <style>
+    #formNovoCurso {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+    <header class="Menu">
+        <div class="container">
+
+            <div class="Menu_logo">
+                <a href="secretaria.html">
+                    <img src="../../images/logosamquim.webp" alt="Logo Sanquim">
+                </a>
+            </div>
+
+            <nav class="Menu_items">
+                <ul>
+                    <li>
+                        <a href="#">Cursos</a>
+                        <i class="fa-solid fa-caret-up"></i>
+                        <div class="Menu_cursos_option submenu">
+                            <a href="#">Turmas</a>
+                            <a href="#">PPC</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Matrículas</a>
+                        <i class="fa-solid fa-caret-up"></i>
+                        <div class="Menu_matriculas_option submenu">
+                            <a href="#">Alunos</a>
+                            <a href="#">Professores</a>
+                        </div>
+                    </li>
+
+                    <li class="NoClick">
+                        <a href="#">Aulas</a>
+                        <i class="fa-solid fa-caret-up"></i>
+                        <div class="Menu_aulas_option submenu">
+                            <a href="#">Histórico de Aulas</a>
+                            <a href="#">Planos de Aulas</a>
+                            <a href="#">Materiais Didaticos</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Comunicados</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Notas</a>
+                    </li>
+
+                    <li class="Menu_profile_item NoClick">
+                        <div class="Menu_profile">
+                            <div class="Menu_profile-icon">
+                                <img src="../../images/profile.webp" alt="Foto de perfil">
+                            </div>
+                            <i class="fa-solid fa-caret-up"></i>
+                        </div>
+                        <div class="Menu_profile_option submenu">
+                            <a href="#">Configurações</a>
+                            <button>Logout</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+  <!-- Tabela de cursos cadastrados fictícios -->
+  <table class="table" border="1">
+    <thead>
+      <tr>
+        <th scope="col">Cursos Cadastrados</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaCursos">
+      <tr><td>Empreendedorismo</td></tr>
+      <tr><td>Pré-Vestibular</td></tr>
+      <tr><td>Pré-Vestibulinho</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Botão para abrir o formulário -->
+  <button id="novoCursoBtn">Novo Curso</button>
+
+  <!-- Formulário de novo curso -->
+  <form id="formNovoCurso">
+    <br><br>
+    <h3>Cadastro de Curso</h3>
+
+    <label>ID:</label>
+    <input type="text" name="id" required><br>
+
+    <label>Nome:</label>
+    <input type="text" id="nomeCurso" name="nome" required><br>
+
+    <label>Período:</label>
+    <input type="text" name="periodo" required><br>
+
+    <label>Carga horária:</label>
+    <input type="text" name="carga" required><br>
+
+    <label>Status:</label>
+    <input type="text" name="status" required><br>
+
+    <button type="submit">Criar Curso</button>
+    <button type="button" id="cancelarBtn">Cancelar</button>
+  </form>
+
+  <!-- Scripts -->
+  <script>
+    // Exibir o formulário
+    document.getElementById("novoCursoBtn").addEventListener("click", function () {
+      document.getElementById("formNovoCurso").style.display = "block";
+      this.style.display = "none";
+    });
+
+    // Submeter o formulário e adicionar o curso à tabela
+    document.getElementById("formNovoCurso").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nomeCurso = document.getElementById("nomeCurso").value.trim();
+
+      if (nomeCurso !== "") {
+        const tabela = document.getElementById("tabelaCursos");
+        const novaLinha = document.createElement("tr");
+        const novaCelula = document.createElement("td");
+        novaCelula.textContent = nomeCurso;
+        novaLinha.appendChild(novaCelula);
+        tabela.appendChild(novaLinha);
+
+        this.reset();
+        this.style.display = "none";
+        document.getElementById("novoCursoBtn").style.display = "inline-block";
+      } else {
+        alert("Digite o nome do curso.");
+      }
+    });
+
+    // Cancelar o cadastro
+    document.getElementById("cancelarBtn").addEventListener("click", function () {
+      const form = document.getElementById("formNovoCurso");
+      form.reset();
+      form.style.display = "none";
+      document.getElementById("novoCursoBtn").style.display = "inline-block";
+    });
+  </script>
+
+</body>
+</html>
