@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Disciplina</title>
+    <link rel="stylesheet" href="../../styles/Msecretaria.css">
+    <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+
+  <style>
+    #formNovaDisciplina{
+      display: none;
+    }
+  </style>
+        <header class="Menu">
+        <div class="container">
+
+            <div class="Menu_logo">
+                <a href="secretaria.html">
+                    <img src="../../images/logosamquim.webp" alt="Logo Sanquim">
+                </a>
+            </div>
+
+            <nav class="Menu_items">
+                <ul>
+                    <li>
+                        <a href="#">Cursos</a>
+                        <i class="fa-solid fa-caret-up"></i>
+                        <div class="Menu_cursos_option submenu">
+                            <a href="#">Turmas</a>
+                            <a href="#">PPC</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Matrículas</a>
+                        <i class="fa-solid fa-caret-up"></i>
+                        <div class="Menu_matriculas_option submenu">
+                            <a href="#">Alunos</a>
+                            <a href="#">Professores</a>
+                        </div>
+                    </li>
+
+                    <li class="NoClick">
+                        <a href="#">Aulas</a>
+                        <i class="fa-solid fa-caret-up"></i>
+                        <div class="Menu_aulas_option submenu">
+                            <a href="#">Histórico de Aulas</a>
+                            <a href="#">Planos de Aulas</a>
+                            <a href="#">Materiais Didaticos</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">Comunicados</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Notas</a>
+                    </li>
+
+                    <li class="Menu_profile_item NoClick">
+                        <div class="Menu_profile">
+                            <div class="Menu_profile-icon">
+                                <img src="../../images/profile.webp" alt="Foto de perfil">
+                            </div>
+                            <i class="fa-solid fa-caret-up"></i>
+                        </div>
+                        <div class="Menu_profile_option submenu">
+                            <a href="#">Configurações</a>
+                            <button>Logout</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+<!--Tabela de turmas cadastradas fictícias-->
+<table class="table" border="1">
+  <thead>
+    <tr>
+      
+      <th scope="col">Disciplinas Cadastradas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Quimica</td>
+    </tr>
+    <tr>
+      <td>Biologia</td>
+    </tr>
+    <tr>
+      <td>Matemática</td>
+    </tr>
+  </tbody>
+</table>
+
+<button id="novaDisciplinaBtn">Nova Disciplina</button>
+
+<!-- Formulário para nova disciplina -->
+<form id="formNovaDisciplina" method="">
+  <br />
+  <input type="text" id="nomeDisciplina" name="nomeDisciplina" placeholder="Nome da disciplina" required /><br>
+  <input type="number" id="statusDisc" name="statusDisc" placeholder="Status" required /><br><br>
+  <button type="submit">Criar Disciplina</button>
+  <button type="button" id="cancelarBtn">Cancelar</button>
+</form>
+
+<!-- Scripts -->
+<script>
+  document.getElementById("novaDisciplinaBtn").addEventListener("click", function () {
+    const form = document.getElementById("formNovaDisciplina");
+    form.style.display = "block";
+    this.style.display = "none";
+  });
+
+  document.getElementById("formNovaDisciplina").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nomeDisciplina = document.getElementById("nomeDisciplina").value.trim();
+
+    if (nomeDisciplina !== "") {
+      const tabela = document.querySelector("table.table tbody");
+      const novaLinha = document.createElement("tr");
+      const novaCelula = document.createElement("td");
+      novaCelula.textContent = nomeDisciplina;
+      novaLinha.appendChild(novaCelula);
+      tabela.appendChild(novaLinha);
+
+      this.reset();
+      this.style.display = "none";
+      document.getElementById("novaDisciplinaBtn").style.display = "inline-block";
+    } else {
+      alert("Digite o nome da disciplina.");
+    }
+  });
+
+  document.getElementById("cancelarBtn").addEventListener("click", function () {
+    const form = document.getElementById("formNovaDisciplina");
+    form.reset();
+    form.style.display = "none";
+    document.getElementById("novaDisciplinaBtn").style.display = "inline-block";
+  });
+</script>
+
+</body>
+</html>
