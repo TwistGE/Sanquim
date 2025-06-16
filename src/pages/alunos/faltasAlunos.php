@@ -9,59 +9,7 @@
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-  <header class="Menu">
-    <div class="container">
-
-      <div class="Menu_logo">
-        <a href="homeAlunos.html">
-          <img src="../../images/sanquimLogo.webp" alt="Logo Sanquim">
-        </a>
-      </div>
-      
-      <nav class="Menu_items">
-  <ul>
-    <li>
-      <a href="#">Meu curso</a>
-      <i class="fa-solid fa-caret-up"></i>
-      <div class="Menu_cursos_option submenu">
-        <a href="#">Materiais</a>
-        <a href="#">Disciplinas</a>
-      </div>
-    </li>
-
-    <li>
-      <a href="#">Notas</a>
-    </li>
-
-    <li>
-      <a href="#">Faltas</a>
-    </li>
-
-    <li>
-      <a href="#">Secretaria</a>
-    </li>
-
-    <li class="Menu_profile_item">
-      <div class="Menu_profile">
-        <div class="Menu_profile-icon">
-          <img src="../../images/profile.webp" alt="Foto de perfil">
-        </div>
-        <i class="fa-solid fa-caret-up"></i>
-      </div>
-      <div class="Menu_profile_option submenu">
-        <a href="#">Configurações</a>
-        <button>Logout</button>
-      </div>
-    </li>
-
-    <li>
-      <i class="fa-solid fa-envelope-open-text inbox"></i>
-    </li>
-  </ul>
-</nav>
-      
-    </div>
-  </header>
+  <?php include '../../Headers/Malunos.html'; ?>
 
   <main>
     <div class="container_faltas">
