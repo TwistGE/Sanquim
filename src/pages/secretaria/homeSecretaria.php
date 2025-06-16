@@ -89,6 +89,38 @@
                 <i class="fa-solid fa-square-check"></i>
               </div>
             </li>
+            <li>
+              <span>Tarefa 8</span>
+              <div class="icons">
+                <i class="fa-solid fa-trash-can"></i>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-square-check"></i>
+              </div>
+            </li>
+            <li>
+              <span>Tarefa 9</span>
+              <div class="icons">
+                <i class="fa-solid fa-trash-can"></i>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-square-check"></i>
+              </div>
+            </li>
+            <li>
+              <span>Tarefa 10</span>
+              <div class="icons">
+                <i class="fa-solid fa-trash-can"></i>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-square-check"></i>
+              </div>
+            </li>
+            <li>
+              <span>Tarefa 11</span>
+              <div class="icons">
+                <i class="fa-solid fa-trash-can"></i>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-square-check"></i>
+              </div>
+            </li>
             <button>Adicionar Nova tarefa ++</button>
           </div>
         </ul>
