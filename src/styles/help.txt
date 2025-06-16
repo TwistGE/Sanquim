@@ -1,0 +1,41 @@
+
+Remover scrollbar =
+  main <class>::-webkit-scrollbar {
+    display: none;                  /* Chrome, Safari, Edge moderno */
+  }
+
+Estrutura 100% tela sem quebrar =
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+  }
+
+
+  html,body{
+    height: 100dvh;
+    width: 100dvw;
+  }
+  body{
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+Ilha flutuante =
+  main .island{
+  overflow: scroll;
+  height: 82dvh;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Secundary-color);
+  box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
+  overflow-x: hidden;
+  } 
