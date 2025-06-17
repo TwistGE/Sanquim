@@ -39,3 +39,17 @@ Ilha flutuante =
   box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
   overflow-x: hidden;
   } 
+
+
+icone de foto =
+  Menu_profile-icon{
+    width: 80px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .Menu_profile-icon img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }

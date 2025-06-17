@@ -1,0 +1,105 @@
+main{
+  padding: 1rem;
+}
+.content {
+  display: flex;
+  gap: 1rem;
+}
+main .island{
+  height: 82dvh;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--Secundary-color);
+  box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
+  justify-content: center;
+  align-items: center;
+  } 
+
+.colum1 {
+  width: 66%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.colum2 {
+  width: 33%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.container_aluno {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: aqua  ;
+}
+
+/* Lado esquerdo: Dados Pessoais */
+.aluno_info_pessoal {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-right: 2px solid black;
+  padding-right: 1rem;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto_aluno {
+  width: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+}
+
+.foto_aluno img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dados_aluno{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.dados_aluno h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dados_aluno p {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+/* Lado direito: Informações Curso */
+.aluno_info_curso {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}
+
+.aluno_info_curso h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.aluno_info_curso p {
+  font-size: 1rem;
+}
