@@ -13,7 +13,6 @@ main .island{
   flex-direction: row;
   background-color: var(--Secundary-color);
   box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
-  justify-content: center;
   align-items: center;
   } 
 
@@ -24,13 +23,7 @@ main .island{
   justify-content: center;
   align-items: start;
 }
-.colum2 {
-  width: 33%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
+
 
 .container_aluno {
   display: flex;
@@ -103,3 +96,39 @@ main .island{
 .aluno_info_curso p {
   font-size: 1rem;
 }
+
+
+/*Planos de aula*/
+main .colum2 {
+  width: 33%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.colum2 .planos-top {
+  align-self: center;
+  padding: 1rem;
+  width: 100%;
+  border: 2px solid rgb(0, 0, 0);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--Primary-color);
+  text-align: center;
+}
+
+.colum2 .planos-top h3{
+  text-align: center;
+}
+.colum2 .Menu_profile-icon{
+    width: 80px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+.colum2 .Menu_profile-icon img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }

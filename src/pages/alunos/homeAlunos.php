@@ -47,7 +47,6 @@
           <ul>
             <li>
               <div class="profile">
-
                 <div class="Menu_profile-icon">
                   <img src="../../images/profile.webp" alt="Foto de perfil">
                 </div>
@@ -68,3 +67,14 @@
 </body>
 </html>
   
+<div class="inputs">
+  <div class="h3"></div>
+</div>
+
+<div class="inputs">
+  <div class="h3"></div>
+</div>
+
+<div class="inputs">
+  <div class="h3"></div>
+</div>
