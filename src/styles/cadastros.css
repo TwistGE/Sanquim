@@ -1,0 +1,58 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+  }
+
+
+  html,body{
+    height: 100dvh;
+    width: 100dvw;
+  }
+  body{
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+  }
+
+  main {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+main .island{
+  height: fit-content;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Secundary-color);
+  box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
+  overflow-x: hidden;
+}
+main .select{
+    align-items: center;
+    gap: .6rem;
+}
+
+main .form{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 10px;
+    background-color: #FFD984;
+    align-self: center;
+    justify-self: center;
+}
+
+main .form .pattern{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+}
