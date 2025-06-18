@@ -14,8 +14,7 @@
       display: none;
     }
   </style>
-  
-  <?php include '../../Headers/Msecretaria.html'; ?>
+
 
 <!--Tabela de turmas cadastradas fictícias-->
 <table class="table" border="1">

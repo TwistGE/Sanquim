@@ -12,7 +12,6 @@
 <body>
   <header class="Menu">
     <div class="container">
-
       <div class="Menu_logo">
         <a href="secretaria.html">
           <img src="../../images/sanquimLogo.webp" alt="Logo Sanquim">

@@ -7,6 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-  <?php include '../../Headers/Msecretaria.html'; ?>
+  <?php include '../../Headers/Mprofessores.html'; ?>
 </body>
 </html>
