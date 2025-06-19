@@ -11,9 +11,8 @@ body {
 main {
   display: grid;
   padding: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(190.5px, 30%));
-  grid-template-rows: repeat(auto-fit, minmax(190.5px, 30%));      
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(190.5px, 30%));   
+  gap: 3rem ;
   justify-content: space-around;
 }
 
@@ -25,13 +24,13 @@ main {
         padding: 12px;
         flex-direction: column;
         border: 2px solid;
-        
     }
     .container_faltas h3{
         font-size: 1.6rem;
     }
 
-    ul li, .frequencia{
+    .container_faltas ul li, 
+    .frequencia{
         list-style: none;
         line-height: 150%;
         font-size: 1.3rem;

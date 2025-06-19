@@ -14,6 +14,7 @@ main .island{
   background-color: var(--Secundary-color);
   box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
   align-items: center;
+  overflow: hidden;
   } 
 
 .colum1 {
@@ -32,7 +33,6 @@ main .island{
   height: 80%;
   padding: 1rem;
   gap: 1rem;
-  background-color: aqua  ;
 }
 
 /* Lado esquerdo: Dados Pessoais */
@@ -101,7 +101,7 @@ main .island{
 /*Planos de aula*/
 main .colum2 {
   width: 33%;
-  height: auto;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -117,10 +117,45 @@ main .colum2 {
   background-color: var(--Primary-color);
   text-align: center;
 }
-
-.colum2 .planos-top h3{
-  text-align: center;
+.colum2 .planos_conteudo{
+  width: 100%;
+  overflow: scroll;
+  height: 100%;
 }
+main .colum2 .planos_conteudo::-webkit-scrollbar {
+    display: none;                  /* Chrome, Safari, Edge moderno */
+  }
+.planos_conteudo ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.planos_conteudo li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap:1rem;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-left: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+}
+.planos_conteudo li:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.planos_conteudo li .profile{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.planos_conteudo .data{
+  font-weight: 600;
+}
+
 .colum2 .Menu_profile-icon{
     width: 80px;
     aspect-ratio: 1/1;
