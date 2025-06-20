@@ -51,124 +51,13 @@
                   <img src="../../images/profile.webp" alt="Foto de perfil">
                 </div>
                 <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
+                  <h3>Julia da Silva </h3>
                   <span>
-                    Aula de bioquimica explorando os conceitos
+                    Solicitação de documento
                   </span>
                   
                 </div>
               </div>
-              <span class="data">20/07/2025</span>
-            </li>
-            <li>
-              <div class="profile">
-                <div class="Menu_profile-icon">
-                  <img src="../../images/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
-                  <span>
-                    Aula de bioquimica explorando os conceitos
-                  </span>
-                  
-                </div>
-              </div>
-              <span class="data">20/07/2025</span>
-            </li>
-
-            <li>
-              <div class="profile">
-                <div class="Menu_profile-icon">
-                  <img src="../../images/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
-                  <span>
-                    Aula de bioquimica explorando os conceitos
-                  </span>
-                  
-                </div>
-              </div>
-              <span class="data">20/07/2025</span>
-            </li>
-
-            <li>
-              <div class="profile">
-                <div class="Menu_profile-icon">
-                  <img src="../../images/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
-                  <span>
-                    Aula de bioquimica explorando os conceitos
-                  </span>
-                  
-                </div>
-              </div>
-              <span class="data">20/07/2025</span>
-            </li>
-
-            <li>
-              <div class="profile">
-                <div class="Menu_profile-icon">
-                  <img src="../../images/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
-                  <span>
-                    Aula de bioquimica explorando os conceitos
-                  </span>
-                  
-                </div>
-              </div>
-              <span class="data">20/07/2025</span>
-            </li>
-            <li>
-              <div class="profile">
-                <div class="Menu_profile-icon">
-                  <img src="../../images/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
-                  <span>
-                    Aula de bioquimica explorando os conceitos
-                  </span>
-                  
-                </div>
-              </div>
-              <span class="data">20/07/2025</span>
-            </li>
-
-            <li>
-              <div class="profile">
-                <div class="Menu_profile-icon">
-                  <img src="../../images/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
-                  <span>
-                    Aula de bioquimica explorando os conceitos
-                  </span>
-                  
-                </div>
-              </div>
-              <span class="data">20/07/2025</span>
-            </li>
-
-            <li>
-              <div class="profile">
-                <div class="Menu_profile-icon">
-                  <img src="../../images/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="solicitacoes-texts">
-                  <h3>Bioquimica </h3>
-                  <span>
-                    Aula de bioquimica explorando os conceitos
-                  </span>
-                  
-                </div>
-              </div>
-              <span class="data">20/07/2025</span>
             </li>
           </ul>
       </div>
@@ -178,3 +67,14 @@
 </body>
 </html>
   
+<div class="inputs">
+  <div class="h3"></div>
+</div>
+
+<div class="inputs">
+  <div class="h3"></div>
+</div>
+
+<div class="inputs">
+  <div class="h3"></div>
+</div>

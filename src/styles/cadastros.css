@@ -38,7 +38,6 @@ main .select{
 }
 
 main .form{
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -49,10 +48,18 @@ main .form{
     background-color: #FFD984;
     align-self: center;
     justify-self: center;
+    align-items: center;
 }
 
-main .form .pattern{
-    display: flex;
-    max-width: 100%;
-    flex-direction: column;
+main .form .pattern {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem; /* espaçamento entre linhas e colunas */
+    padding: 1rem;
+}
+
+.form .pattern > div{
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
 }
