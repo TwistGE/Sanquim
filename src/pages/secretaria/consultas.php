@@ -11,7 +11,6 @@
 
     <body>
         <?php include '../../Headers/Msecretaria.html'; ?>
-    <body>
 
         <h2>Consulta da Secretaria</h2>
 

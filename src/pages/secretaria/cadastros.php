@@ -13,15 +13,6 @@
 <body>
     <?php include '../../Headers/Msecretaria.html'; ?>
 
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Cadastro Único</title>
-    </head>
-
-    <body>
         <main>
         <div class="island select">
             <h2>Cadastro</h2>

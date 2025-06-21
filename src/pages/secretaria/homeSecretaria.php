@@ -10,70 +10,8 @@
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-  <header class="Menu">
-    <div class="container">
-      <div class="Menu_logo">
-        <a href="secretaria.html">
-          <img src="../../images/sanquimLogo.webp" alt="Logo Sanquim">
-        </a>
-      </div>
-      
-      <nav class="Menu_items">
-  <ul>
-    <li>
-      <a href="#">Cursos</a>
-      <i class="fa-solid fa-caret-up"></i>
-      <div class="Menu_cursos_option submenu">
-        <a href="#">Turmas</a>
-        <a href="#">PPC</a>
-        <a href="cadastroCurso.html">Cadastro de curso</a>  
-      </div>
-    </li>
+  <?php include '../../Headers/Msecretaria.html'; ?>
 
-    <li>
-      <a href="#">Matrículas</a>
-      <i class="fa-solid fa-caret-up"></i>
-      <div class="Menu_matriculas_option submenu">
-        <a href="#">Alunos</a>
-        <a href="#">Professores</a>
-      </div>
-    </li>
-
-    <li class="NoClick">
-      <a href="#" >Aulas</a>
-      <i class="fa-solid fa-caret-up"></i>
-      <div class="Menu_aulas_option submenu">
-        <a href="#">Histórico de Aulas</a>
-        <a href="#">Planos de Aulas</a>
-        <a href="#">Materiais Didaticos</a>
-      </div>
-    </li>
-
-      <li>
-        <a href="#">Comunicados</a>
-      </li>
-
-    <li>
-      <a href="#">Notas</a>
-    </li>
-
-    <li class="Menu_profile_item NoClick">
-      <div class="Menu_profile">
-        <div class="Menu_profile-icon">
-          <img src="../../images/profile.webp" alt="Foto de perfil">
-        </div>
-        <i class="fa-solid fa-caret-up"></i>
-      </div>
-      <div class="Menu_profile_option submenu">
-        <a href="#">Configurações</a>
-        <button>Logout</button>
-      </div>
-    </li>
-  </ul>
-</nav>
-      
-    </div>
-  </header>
   <main>
     <div class="colum1">
 
@@ -128,24 +66,6 @@
 
             <li>
               <span>Tarefa 5</span>
-              <div class="icons">
-                <i class="fa-solid fa-trash-can"></i>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-square-check"></i>
-              </div>
-            </li>
-
-            <li>
-              <span>Tarefa 6</span>
-              <div class="icons">
-                <i class="fa-solid fa-trash-can"></i>
-                <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-square-check"></i>
-              </div>
-            </li>
-
-            <li>
-              <span>Tarefa 7</span>
               <div class="icons">
                 <i class="fa-solid fa-trash-can"></i>
                 <i class="fa-solid fa-pen-to-square"></i>

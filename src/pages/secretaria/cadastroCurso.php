@@ -10,8 +10,9 @@
 
 </head>
 <body>
+    <?php include '../../Headers/Msecretaria.html'; ?>
 <main>
-  <?php include('../../../Headers/Msecretaria.html'); ?>
+
   <div class="containers island">
     <div class="container_table">
       <table class="table">
@@ -41,7 +42,6 @@
       </div>
       
       <div class="input">
-        
         <label>Nome:</label>
         <input type="text" id="nomeCurso" name="nome" required><br>
       </div>
