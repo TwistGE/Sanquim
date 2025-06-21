@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fale com a Secretaria</title>
+  <title>Aluno | Fale com a Secretaria</title>
   <link rel="stylesheet" href="../../styles/Malunos.css">
   <link rel="stylesheet" href="../../styles/faleSecretaria.css">
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
