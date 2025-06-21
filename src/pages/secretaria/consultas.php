@@ -1,31 +1,36 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Secretaria | Consultas</title>
-        <link rel="stylesheet" href="../../styles/Msecretaria.css">
-        <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
-    </head>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <body>
-        <?php include '../../Headers/Msecretaria.html'; ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria | Consultas</title>
+    <link rel="stylesheet" href="../../styles/Msecretaria.css">
+    <link rel="stylesheet" href="../../styles/consultas.css">
+    <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
+</head>
 
-        <h2>Consulta da Secretaria</h2>
+<body>
+    <?php include '../../Headers/Msecretaria.html'; ?>
 
+    <main>
+        <div class="container_consulta island">
 
-
-        <label for="tipo">Escolha uma categoria:</label>
-        <select id="tipo" onchange="mostrarTabela()">
-            <option value="">-- Selecione --</option>
-            <option value="alunos">Alunos</option>
-            <option value="professores">Professores</option>
-            <option value="usuarios">Usuários</option>
-        </select>
-
-        <div id="tabela-container"></div>
+            <h2>Consulta da Secretaria</h2>
+            
+            <label for="tipo">Escolha uma categoria:</label>
+            <select id="tipo" onchange="mostrarTabela()">
+                <option value="">-- Selecione --</option>
+                <option value="alunos">Alunos</option>
+                <option value="professores">Professores</option>
+                <option value="usuarios">Usuários</option>
+            </select>
+            
+        </div>
+            <div id="tabela-container" class="hidden island"></div>
         <div id="detalhes"></div>
+    </main>
 
     <script>
         const dados = {
@@ -67,43 +72,43 @@
             ]
         };
 
-  function mostrarTabela() {
-        const tipo = document.getElementById('tipo').value;
-        const container = document.getElementById('tabela-container');
-        container.innerHTML = ''; // limpa o conteúdo anterior
+        function mostrarTabela() {
+            const tipo = document.getElementById('tipo').value;
+            const container = document.getElementById('tabela-container');
+            container.innerHTML = '';
 
-        if (!tipo || !dados[tipo]) return;
+            if (!tipo || !dados[tipo]) {
+                container.classList.remove('show');
+                container.classList.add('hidden');
+                return;
+            }
 
-        const tabela = document.createElement('table');
-        tabela.border = '1';
+            const tabela = document.createElement('table');
+            tabela.className = 'table';
 
-        // Cabeçalhos
-        const cabecalho = document.createElement('tr');
-        const colunas = Object.keys(dados[tipo][0]);
-        colunas.forEach(col => {
-            const th = document.createElement('th');
-            th.textContent = col.charAt(0).toUpperCase() + col.slice(1);
-            cabecalho.appendChild(th);
-        });
-        tabela.appendChild(cabecalho);
-
-        // Linhas de dados
-        dados[tipo].forEach(registro => {
-            const linha = document.createElement('tr');
+            const cabecalho = document.createElement('tr');
+            const colunas = Object.keys(dados[tipo][0]);
             colunas.forEach(col => {
-                const td = document.createElement('td');
-                if (col === 'status') {
-                    td.textContent = registro[col] === 1 ? 'Ativo' : 'Inativo';
-                } else {
-                    td.textContent = registro[col];
-                }
-                linha.appendChild(td);
+                const th = document.createElement('th');
+                th.textContent = col.charAt(0).toUpperCase() + col.slice(1);
+                cabecalho.appendChild(th);
             });
-            tabela.appendChild(linha);
-        });
+            tabela.appendChild(cabecalho);
 
-        container.appendChild(tabela);
-    }
-</script>
-    </body>
-    </html>
+            dados[tipo].forEach(registro => {
+                const linha = document.createElement('tr');
+                colunas.forEach(col => {
+                    const td = document.createElement('td');
+                    td.textContent = col === 'status' ? (registro[col] === 1 ? 'Ativo' : 'Inativo') : registro[col];
+                    linha.appendChild(td);
+                });
+                tabela.appendChild(linha);
+            });
+
+            container.appendChild(tabela);
+            container.classList.remove('hidden');
+            container.classList.add('show');
+        }
+    </script>
+</body>
+</html>

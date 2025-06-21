@@ -5,43 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Secretaria | Decl.Matricula</title>
   <link rel="stylesheet" href="../../styles/Msecretaria.css" />
+  <link rel="stylesheet" href="../../styles/declaracaoMatricula.css" />
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
   <?php include '../../Headers/Msecretaria.html'; ?>
 
-  <main style="padding:20px;">
-    <h2>Declaração de Matrícula</h2>
+  <main>
+    <div class="island">
+      <div class="container_declara">
 
-    <label for="alunoSelect">Selecione o aluno:</label>
-    <select id="alunoSelect">
-      <option value="">-- Escolha um aluno --</option>
-    </select>
-    <button id="btnGerar">Gerar Declaração</button>
-
-    <section id="declaracao" style="margin-top:30px; display:none; border:1px solid #000; padding:20px; max-width:600px;">
-      <p>
-        Declaramos, para os devidos fins, que o(a) aluno(a)
-        <strong id="nomeAluno"></strong>, portador(a) do CPF nº
-        <strong id="cpfAluno"></strong> e RG nº
-        <strong id="rgAluno"></strong>, encontra-se regularmente matriculado(a)
-        no <strong id="serieAluno"></strong>, Turma
-        <strong id="turmaAluno"></strong>, no período
-        <strong id="turnoAluno"></strong>, nesta instituição de ensino.
-      </p>
-      <p>
-        A matrícula foi realizada no dia
-        <strong id="dataMatricula"></strong> e permanece ativa até a presente data.
-      </p>
-      <p>
-        Para que produza os efeitos legais, firmamos a presente declaração.
-      </p>
-      <p><strong id="dataAtual"></strong></p>
-
-      <br />
-      <p>____________________________________________</p>
-      <p>Assinatura da Secretaria</p>
-    </section>
+        <h2>Declaração de Matrícula</h2>
+        
+        <label for="alunoSelect">Selecione o aluno:</label>
+        <select id="alunoSelect">
+          <option value="">-- Escolha um aluno --</option>
+        </select>
+        <button id="btnGerar">Gerar Declaração</button>
+      </div>
+      
+      <section id="declaracao">
+        <p>
+          Declaramos, para os devidos fins, que o(a) aluno(a)
+          <strong id="nomeAluno"></strong>, portador(a) do CPF nº
+          <strong id="cpfAluno"></strong> e RG nº
+          <strong id="rgAluno"></strong>, encontra-se regularmente matriculado(a)
+          no <strong id="serieAluno"></strong>, Turma
+          <strong id="turmaAluno"></strong>, no período
+          <strong id="turnoAluno"></strong>, nesta instituição de ensino.
+        </p>
+        <p>
+          A matrícula foi realizada no dia
+          <strong id="dataMatricula"></strong> e permanece ativa até a presente data.
+        </p>
+        <p>
+          Para que produza os efeitos legais, firmamos a presente declaração.
+        </p>
+        <p><strong id="dataAtual"></strong></p>
+        
+        <br />
+        <p>____________________________________________</p>
+        <p>Assinatura da Secretaria</p>
+      </section>
+    </div>
   </main>
 
   <script>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --Primary-color:  #FFC544;
+  --Primary-color-border:  rgb(0, 0, 0);
+  --Secundary-color:#FFD984;
+  --Tertiary-color: #379090;
+
+  --FontSizeMenu: 1rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+
+html,body{
+  height: 100dvh;
+  width: 100dvw;
+}
+body{
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+}
+
+main {
+  padding: 1rem;
+}
+main .island{
+  overflow: scroll;
+  height: 82dvh;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Secundary-color);
+  box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
+  overflow-x: hidden;
+}
+main .island::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari, Edge moderno */
+}
+.containers {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+.containers button{
+  color: #fff;
+  width: 20%;
+  padding: 1rem;
+  font-weight: 700;
+  text-align: center;
+  align-self: center;
+  border-radius: 8px;
+  background-color: var(--Tertiary-color);
+  transition: all .3s ease-in-out;
+}
+
+.containers button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.table{
+  /* background-color: aquamarine; */
+  border-radius: 8px;
+  width: 50%;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.title_table{
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.containers .container_table .table #tabelaDisciplinas {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%;
+}
+.containers .container_table .table #tabelaDisciplinas tr{
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.containers .container_table .table #tabelaDisciplinas td{
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/*Cadastro novo curso*/
+
+.hidden{
+  transform: translateX(-100%);
+  transition: all ease-in-out .5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.show{
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all ease-in-out .5s;
+  pointer-events:relative;
+}
+#formNovaDisciplina {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+
+}
+#formNovaDisciplina .input{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+#formNovaDisciplina label{
+  text-wrap-mode: nowrap;
+  font-weight: 600;
+}
+#formNovaDisciplina input{
+  width: 100%;
+  padding: .2rem;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.808);
+}
+#formNovaDisciplina .form_buttons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+#formNovaDisciplina .form_buttons button{
+  min-width: fit-content;
+  padding: .8rem;
+}

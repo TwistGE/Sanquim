@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --Primary-color:  #FFC544;
+  --Primary-color-border:  rgb(0, 0, 0);
+  --Secundary-color:#FFD984;
+  --Tertiary-color: #379090;
+
+  --FontSizeMenu: 1rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+
+html,body{
+  height: 100dvh;
+  width: 100dvw;
+}
+body{
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+}
+
+main {
+  padding: 1rem;
+}
+main .island{
+  overflow: scroll;
+  height: 82dvh;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Secundary-color);
+  box-shadow:2px 2px 2px 2px rgba(189, 78, 78, 0.354);
+  overflow-x: hidden;
+  align-items: center;
+}
+main .island::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari, Edge moderno */
+}
+
+main .container_declara{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+  text-align: center;
+}
+
+.container_declara button{
+  color: #fff;
+  width: 30%;
+  padding: 1rem;
+  font-weight: 700;
+  text-align: center;
+  align-self: center;
+  border-radius: 8px;
+  background-color: var(--Tertiary-color);
+  transition: all .3s ease-in-out;
+}
+
+main .container_declara select{
+  width: 50%;
+  align-self: center;
+}
+
+#declaracao{
+  display: none;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.263);
+  width: 50%;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+}

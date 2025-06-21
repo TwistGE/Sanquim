@@ -1,89 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Disciplina</title>
-    <link rel="stylesheet" href="../../styles/Msecretaria.css">
-    <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro Disciplina</title>
+  <link rel="stylesheet" href="../../styles/Msecretaria.css" />
+  <link rel="stylesheet" href="../../styles/cadastroDisciplina.css" />
+  <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
+  <?php include '../../Headers/Msecretaria.html'; ?>
+  <main>
+    <div class="containers island">
+      <div class="container_table">
+        <table class="table">
+          <thead>
+            <tr><th class="title_table">Disciplinas Cadastradas</th></tr>
+          </thead>
+          <tbody id="tabelaDisciplinas">
+            <tr><td>Química</td></tr>
+            <tr><td>Biologia</td></tr>
+            <tr><td>Matemática</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-  <style>
-    #formNovaDisciplina{
-      display: none;
-    }
-  </style>
+      <button id="novaDisciplinaBtn">Nova Disciplina</button>
 
-    <?php include '../../Headers/Msecretaria.html'; ?>
-<!--Tabela de turmas cadastradas fictícias-->
-<table class="table" border="1">
-  <thead>
-    <tr>
-      
-      <th scope="col">Disciplinas Cadastradas</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Quimica</td>
-    </tr>
-    <tr>
-      <td>Biologia</td>
-    </tr>
-    <tr>
-      <td>Matemática</td>
-    </tr>
-  </tbody>
-</table>
+      <form id="formNovaDisciplina" class="table hidden">
+        <h3 class="title_table">Cadastro de Disciplina</h3>
 
-<button id="novaDisciplinaBtn">Nova Disciplina</button>
+        <div class="input">
+          <label>Nome:</label>
+          <input type="text" id="nomeDisciplina" required />
+        </div>
 
-<!-- Formulário para nova disciplina -->
-<form id="formNovaDisciplina" method="">
-  <br />
-  <input type="text" id="nomeDisciplina" name="nomeDisciplina" placeholder="Nome da disciplina" required /><br>
-  <input type="number" id="statusDisc" name="statusDisc" placeholder="Status" required /><br><br>
-  <button type="submit">Criar Disciplina</button>
-  <button type="button" id="cancelarBtn">Cancelar</button>
-</form>
+        <div class="input">
+          <label>Status:</label>
+          <input type="text" id="statusDisciplina" required />
+        </div>
 
-<!-- Scripts -->
-<script>
-  document.getElementById("novaDisciplinaBtn").addEventListener("click", function () {
+        <div class="form_buttons">
+          <button type="submit">Criar Disciplina</button>
+          <button type="button" id="cancelarBtn">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const btn = document.getElementById("novaDisciplinaBtn");
     const form = document.getElementById("formNovaDisciplina");
-    form.style.display = "block";
-    this.style.display = "none";
-  });
+    const tabela = document.getElementById("tabelaDisciplinas");
 
-  document.getElementById("formNovaDisciplina").addEventListener("submit", function (e) {
-    e.preventDefault();
+    btn.addEventListener("click", () => {
+      form.classList.remove("hidden");
+      form.classList.add("show");
+    });
 
-    const nomeDisciplina = document.getElementById("nomeDisciplina").value.trim();
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nome = document.getElementById("nomeDisciplina").value.trim();
 
-    if (nomeDisciplina !== "") {
-      const tabela = document.querySelector("table.table tbody");
-      const novaLinha = document.createElement("tr");
-      const novaCelula = document.createElement("td");
-      novaCelula.textContent = nomeDisciplina;
-      novaLinha.appendChild(novaCelula);
-      tabela.appendChild(novaLinha);
+      if (nome !== "") {
+        const linha = document.createElement("tr");
+        const celula = document.createElement("td");
+        celula.textContent = nome;
+        linha.appendChild(celula);
+        tabela.appendChild(linha);
 
-      this.reset();
-      this.style.display = "none";
-      document.getElementById("novaDisciplinaBtn").style.display = "inline-block";
-    } else {
-      alert("Digite o nome da disciplina.");
-    }
-  });
+        form.reset();
+        form.classList.remove("show");
+        form.classList.add("hidden");
+      } else {
+        alert("Digite o nome da disciplina.");
+      }
+    });
 
-  document.getElementById("cancelarBtn").addEventListener("click", function () {
-    const form = document.getElementById("formNovaDisciplina");
-    form.reset();
-    form.style.display = "none";
-    document.getElementById("novaDisciplinaBtn").style.display = "inline-block";
-  });
-</script>
-
+    document.getElementById("cancelarBtn").addEventListener("click", () => {
+      form.reset();
+      form.classList.remove("show");
+      form.classList.add("hidden");
+    });
+  </script>
 </body>
 </html>
