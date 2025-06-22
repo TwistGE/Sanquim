@@ -19,55 +19,8 @@
 </head>
 
 <body>
-  <header class="Menu">
-    <div class="container">
-      <div class="Menu_logo">
-        <a href="secretaria.html">
-          <img src="../../images/logosamquim.webp" alt="Logo Sanquim" />
-        </a>
-      </div>
+      <?php include '../../Headers/Mprofessores.html'; ?>
 
-      <nav class="Menu_items">
-        <ul>
-          <li>
-            <a href="#">Cursos</a>
-            <i class="fa-solid fa-caret-up"></i>
-            <div class="Menu_cursos_option submenu">
-              <a href="#">Turmas</a>
-              <a href="#">PPC</a>
-            </div>
-          </li>
-
-          <li class="NoClick">
-            <a href="#">Aulas</a>
-            <i class="fa-solid fa-caret-up"></i>
-            <div class="Menu_aulas_option submenu">
-              <a href="#">Histórico de Aulas</a>
-              <a href="#">Planos de Aulas</a>
-              <a href="#">Materiais Didáticos</a>
-            </div>
-          </li>
-
-          <li><a href="#">Secretaria</a></li>
-
-          <li class="Menu_profile_item">
-            <div class="Menu_profile">
-              <div class="Menu_profile-icon">
-                <img src="../../images/profile.webp" alt="Foto de perfil" />
-              </div>
-              <i class="fa-solid fa-caret-up"></i>
-            </div>
-            <div class="Menu_profile_option submenu">
-              <a href="#">Configurações</a>
-              <button>Logout</button>
-            </div>
-          </li>
-
-          <li><i class="fa-solid fa-envelope-open-text inbox"></i></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
   <main style="padding: 20px;">
     <h1>Histórico de Aulas</h1>
