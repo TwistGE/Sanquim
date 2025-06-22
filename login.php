@@ -16,22 +16,22 @@
        <main class="container_login">
             <img src="  src/images/logosamquim.webp" alt="Logo"
                 style="max-width: 150px; display: block; margin: 0 auto;">
-        <form action="">
+<form onsubmit="return validarLogin()">
 
-            <h3>Login</h3>
-            <br>
-            <div class="input-box">
-                <input type="text" placeholder="Usuário">
-            </div>
-            <br>
-            <div class="input-box">
-                <input type="password" placeholder="Senha">
-            </div>
-            <br>
-            <button>Entrar</button>
-            <br>
-            <a href="recuperarsenha.html" class="esqueci-senha">Esqueci minha senha</a>
-        </form>
+    <h3>Login</h3>
+    <br>
+    <div class="input-box">
+        <input type="text" id="usuario" placeholder="Usuário">
+    </div>
+    <br>
+    <div class="input-box">
+        <input type="password" id="senha" placeholder="Senha">
+    </div>
+    <br>
+    <button type="submit">Entrar</button>
+    <br>
+    <a href="recuperarsenha.html" class="esqueci-senha">Esqueci minha senha</a>
+</form>
 
     </main>
 
