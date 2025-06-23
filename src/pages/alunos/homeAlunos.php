@@ -50,15 +50,131 @@
                 <div class="Menu_profile-icon">
                   <img src="../../images/profile.webp" alt="Foto de perfil">
                 </div>
-                <div class="solicitacoes-texts">
-                  <h3>Julia da Silva </h3>
-                  <span>
-                    Solicitação de documento
-                  </span>
-                  
+                <div class="aulas-texts">
+                  <h3>Matemática</h3>
+                  <span>Introdução às equações do 2º grau</span>
                 </div>
               </div>
+              <span>01/07</span>
             </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Português</h3>
+                  <span>Gêneros textuais e suas características</span>
+                </div>
+              </div>
+              <span>03/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>História</h3>
+                  <span>Brasil Império: principais transformações</span>
+                </div>
+              </div>
+              <span>05/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Geografia</h3>
+                  <span>Tipos de clima e vegetação do Brasil</span>
+                </div>
+              </div>
+              <span>07/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Biologia</h3>
+                  <span>Cadeia alimentar e equilíbrio ecológico</span>
+                </div>
+              </div>
+              <span>09/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Física</h3>
+                  <span>Velocidade média e movimento uniforme</span>
+                </div>
+              </div>
+              <span>11/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Química</h3>
+                  <span>Estados físicos da matéria e mudanças</span>
+                </div>
+              </div>
+              <span>13/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Redação</h3>
+                  <span>Como desenvolver uma boa introdução</span>
+                </div>
+              </div>
+              <span>15/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Empreendedorismo</h3>
+                  <span>Planejamento de ideias de negócio</span>
+                </div>
+              </div>
+              <span>17/07</span>
+            </li>
+
+            <li>
+              <div class="profile">
+                <div class="Menu_profile-icon">
+                  <img src="../../images/profile.webp" alt="Foto de perfil">
+                </div>
+                <div class="aulas-texts">
+                  <h3>Atualidades</h3>
+                  <span>Impactos da tecnologia na sociedade</span>
+                </div>
+              </div>
+              <span>19/07</span>
+            </li>
+
           </ul>
       </div>
     </div>
@@ -67,14 +183,3 @@
 </body>
 </html>
   
-<div class="inputs">
-  <div class="h3"></div>
-</div>
-
-<div class="inputs">
-  <div class="h3"></div>
-</div>
-
-<div class="inputs">
-  <div class="h3"></div>
-</div>

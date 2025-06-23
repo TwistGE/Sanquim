@@ -6,87 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sanquim | Histórico de Aulas</title>
   <link rel="stylesheet" href="../../styles/Mprofessores.css" />
+  <link rel="stylesheet" href="../../styles/historicoAula.css" />
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
-  <style>
-    .aula-concluida {
-      text-decoration: line-through;
-      color: #2ecc71;
-    }
-    .aula-item {
-      transition: all 0.3s ease;
-    }
-  </style>
+
 </head>
 
 <body>
-  <header class="Menu">
-    <div class="container">
-      <div class="Menu_logo">
-        <a href="secretaria.html">
-          <img src="../../images/logosamquim.webp" alt="Logo Sanquim" />
-        </a>
+    <?php include '../../Headers/Mprofessores.html'; ?>
+
+  <main>
+    <div class="historico island">
+
+      <h1>Histórico de Aulas</h1>
+      
+      <div class="historico-select">
+        <label for="turma">Turma:</label>
+        <select id="turma" >
+          <option value="">-- Selecione uma turma --</option>
+          <option value="1A">1º Informática A</option>
+          <option value="2B">2º Enfermagem B</option>
+        </select>
+        
+        <label for="materia">Matéria:</label>
+        <select id="materia">
+          <option value="">-- Selecione uma matéria --</option>
+        </select>
       </div>
-
-      <nav class="Menu_items">
-        <ul>
-          <li>
-            <a href="#">Cursos</a>
-            <i class="fa-solid fa-caret-up"></i>
-            <div class="Menu_cursos_option submenu">
-              <a href="#">Turmas</a>
-              <a href="#">PPC</a>
-            </div>
-          </li>
-
-          <li class="NoClick">
-            <a href="#">Aulas</a>
-            <i class="fa-solid fa-caret-up"></i>
-            <div class="Menu_aulas_option submenu">
-              <a href="#">Histórico de Aulas</a>
-              <a href="#">Planos de Aulas</a>
-              <a href="#">Materiais Didáticos</a>
-            </div>
-          </li>
-
-          <li><a href="#">Secretaria</a></li>
-
-          <li class="Menu_profile_item">
-            <div class="Menu_profile">
-              <div class="Menu_profile-icon">
-                <img src="../../images/profile.webp" alt="Foto de perfil" />
-              </div>
-              <i class="fa-solid fa-caret-up"></i>
-            </div>
-            <div class="Menu_profile_option submenu">
-              <a href="#">Configurações</a>
-              <button>Logout</button>
-            </div>
-          </li>
-
-          <li><i class="fa-solid fa-envelope-open-text inbox"></i></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main style="padding: 20px;">
-    <h1>Histórico de Aulas</h1>
-
-    <div>
-      <label for="turma">Turma:</label>
-      <select id="turma">
-        <option value="">-- Selecione uma turma --</option>
-        <option value="1A">1º Informática A</option>
-        <option value="2B">2º Enfermagem B</option>
-      </select>
-
-      <label for="materia">Matéria:</label>
-      <select id="materia">
-        <option value="">-- Selecione uma matéria --</option>
-      </select>
     </div>
 
-    <div id="aulasContainer" style="margin-top: 30px;">
+    <div id="aulasContainer" class="island">
       <!-- Aulas exibidas aqui -->
     </div>
   </main>
@@ -139,7 +87,6 @@
       aulasFicticias.forEach((aula, index) => {
         const divAula = document.createElement("div");
         divAula.classList.add("aula");
-        divAula.style.marginBottom = "20px";
 
         const aulaItem = document.createElement("div");
         aulaItem.classList.add("aula-item");

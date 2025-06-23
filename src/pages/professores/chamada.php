@@ -6,38 +6,44 @@
   <title>Professor | Registro de frequência</title>
   
   <link rel="stylesheet" href="../../styles/Mprofessores.css">
+  <link rel="stylesheet" href="../../styles/chamada.css">
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
       <?php include '../../Headers/Mprofessores.html'; ?>
-        <h1>Chamada</h1>
-    
-    <div>
-        <label for="turma">Selecione a turma:</label>
-        <select id="turma">
-            <option value="">-- Selecione --</option>
-            <option value="1A">1º Ano A - Informática</option>
-            <option value="1B">1º Ano B - Enfermagem</option>
-            <option value="2A" selected>2º Ano A - Administração</option>
-            <option value="2B">2º Ano B - Edificações</option>
-        </select>
-    </div>
 
-    <div>
-        <label for="quantidadeAulas">Quantidade de aulas no período:</label>
-        <input type="number" id="quantidadeAulas" min="1" max="20" value="2">
-    </div>
-
-    <div id="tabelaFaltas">
-        <!-- Tabela de faltas será inserida aqui -->
-    </div>
-
-    <script>
-        const turmaSelect = document.getElementById('turma');
-        const quantidadeAulasInput = document.getElementById('quantidadeAulas');
-        const tabelaFaltas = document.getElementById('tabelaFaltas');
-
-        // Dados fictícios de alunos por turma (10 alunos cada)
+    <main>
+        <div class="chamada island">
+            <h1>Chamada</h1>
+            
+            <div class="chamada-select">
+                <label for="turma">Selecione a turma:</label>
+                <select id="turma">
+                    <option value="">-- Selecione --</option>
+                    <option value="1A">1º Ano A - Informática</option>
+                    <option value="1B">1º Ano B - Enfermagem</option>
+                    <option value="2A" selected>2º Ano A - Administração</option>
+                    <option value="2B">2º Ano B - Edificações</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="quantidadeAulas">Quantidade de aulas no período:</label>
+                <input type="number" id="quantidadeAulas" min="1" max="20" value="2">
+            </div>
+        </div>
+            
+        <div id="tabelaFaltas" class="island">
+            <!-- Tabela de faltas será inserida aqui -->
+        </div>
+    </main>
+        
+        <script>
+            const turmaSelect = document.getElementById('turma');
+            const quantidadeAulasInput = document.getElementById('quantidadeAulas');
+            const tabelaFaltas = document.getElementById('tabelaFaltas');
+            
+            // Dados fictícios de alunos por turma (10 alunos cada)
         const alunosPorTurma = {
             "1A": [
                 "Ana Silva", "Bruno Oliveira", "Carlos Santos", "Daniela Costa", "Eduardo Pereira",
@@ -68,7 +74,6 @@
             
             // Cria a tabela
             const tabela = document.createElement('table');
-            tabela.border = "1";
             
             // Cria cabeçalho
             const thead = document.createElement('thead');
