@@ -6,60 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanquim | Home</title>
   <link rel="stylesheet" href="../../styles/Mprofessores.css">
+    <link rel="stylesheet" href="../../styles/planoDeAula.css">
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
 
   <?php include '../../Headers/Msecretaria.html'; ?>
 
-  <h1>Cadastro de Plano Aula</h1>
+  <main>
+    <div class="colum1 island">
 
-  <div>
-    <label for="turma">Selecione a Turma:</label>
-    <select id="turma" required>
-      <option value="">-- Selecione uma turma --</option>
-      <option value="1A">1º Informática A</option>
-      <option value="2B">2º Enfermagem B</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="materia">Selecione a Matéria:</label>
-    <select id="materia" required>
-      <option value="">-- Selecione uma matéria --</option>
-    </select>
-  </div>
-
-  <form id="formPlano">
-    <div>
-      <label for="dia">Data da Aula:</label>
-      <input type="date" id="dia" name="dia" required>
+      <div class="planos">
+        <h1>Cadastro de Plano Aula</h1>
+        
+      <div class="planos-select">
+        <label for="turma">Selecione a Turma:</label>
+        <select id="turma" required>
+          <option value="">-- Selecione uma turma --</option>
+          <option value="1A">1º Informática A</option>
+          <option value="2B">2º Enfermagem B</option>
+        </select>
+      </div>
+      
+      <div class="planos-select">
+        <label for="materia">Selecione a Matéria:</label>
+        <select id="materia" required>
+          <option value="">-- Selecione uma matéria --</option>
+        </select>
+      </div>
+      
+      
+      <form id="formPlano">
+        <div class="content">
+          
+          <div>
+            <label for="dia">Data da Aula:</label>
+            <input type="date" id="dia" name="dia" required>
+          </div>
+          
+          <div>
+            <label for="assunto">Assunto da Aula:</label>
+            <input type="text" id="assunto" name="assunto" maxlength="100" required>
+          </div>
+          
+          <div>
+            <label for="obs">Desxcrição:</label><br>
+            <textarea id="obs" name="obs" rows="5" cols="40" placeholder="Observações adicionais..."></textarea>
+          </div>
+          
+          <button type="submit">Salvar Plano</button>
+        </div>
+      </form>
     </div>
-
-    <div>
-      <label for="assunto">Assunto da Aula:</label>
-      <input type="text" id="assunto" name="assunto" maxlength="100" required>
-    </div>
-
-    <div>
-      <label for="obs">Desxcrição:</label><br>
-      <textarea id="obs" name="obs" rows="5" cols="40" placeholder="Observações adicionais..."></textarea>
-    </div>
-
-    <button type="submit">Salvar Plano</button>
-  </form>
-
-  <div id="listaPlanos">
-    <h2>Aulas Cadastradas</h2>
-    <!-- Itens adicionados via JS aparecerão aqui -->
   </div>
+  
 
-  <script>
-    const turmaSelect = document.getElementById("turma");
-    const materiaSelect = document.getElementById("materia");
+  
+  <div class="colum2 island">
+    <div id="listaPlanos">
+      <h1>Aulas Cadastradas</h1>
+      
+    </div>
+  </div>
+</main>
+    <script>
+      const turmaSelect = document.getElementById("turma");
+      const materiaSelect = document.getElementById("materia");
     const formPlano = document.getElementById("formPlano");
     const listaPlanos = document.getElementById("listaPlanos");
-
+    
     const materiasPorTurma = {
       "1A": ["Português", "Matemática", "Programação"],
       "2B": ["Anatomia", "Farmacologia", "Enfermagem Básica"]
@@ -120,3 +135,4 @@
 
 </body>
 </html>
+ 

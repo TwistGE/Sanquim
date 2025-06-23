@@ -6,14 +6,17 @@
   <title>Professor | Registro de notas</title>
   
   <link rel="stylesheet" href="../../styles/Mprofessores.css">
+    <link rel="stylesheet" href="../../styles/cadastrarNota.css">
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
       <?php include '../../Headers/Msecretaria.html'; ?>
 
-         <h1>Cadastro de Notas</h1>
+ <main>
+    <div class="cadastro island">
     
-    <div>
+    <h1>Cadastro de Notas</h1>
+    <div class="cadastro-select">
         <label for="turma">Selecione a turma:</label>
         <select id="turma">
             <option value="">-- Selecione --</option>
@@ -23,10 +26,14 @@
             <option value="2B">2º Ano B - Edificações</option>
         </select>
     </div>
+    </div>
+    
 
-    <div id="tabelaNotas" style="margin-top: 20px;">
+    <div id="tabelaNotas" class="island">
         <!-- Tabela de notas será inserida aqui -->
     </div>
+</main>
+    
 
     <script>
         const turmaSelect = document.getElementById('turma');
@@ -63,7 +70,6 @@
             
             // Cria a tabela
             const tabela = document.createElement('table');
-            tabela.border = "1";
             
             // Cria cabeçalho
             const thead = document.createElement('thead');
@@ -122,7 +128,6 @@
             // Adiciona botão para salvar
             const btnSalvar = document.createElement('button');
             btnSalvar.textContent = 'Salvar Notas';
-            btnSalvar.style.marginTop = '10px';
             btnSalvar.addEventListener('click', function() {
                 alert('Notas salvas com sucesso!');
             });
