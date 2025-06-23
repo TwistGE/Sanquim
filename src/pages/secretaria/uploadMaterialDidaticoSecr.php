@@ -9,8 +9,7 @@
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-      <?php include '../../Headers/Mprofessores.html'; ?>
-
+      <?php include '../../Headers/Msecretaria.html'; ?>
 
   <main style="padding:20px;">
     <h2>Upload de Material Didático</h2>

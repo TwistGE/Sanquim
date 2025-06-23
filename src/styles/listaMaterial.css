@@ -1,0 +1,55 @@
+/* Reset e estrutura base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: #f9f9f9;
+}
+
+/* Estilo do conteúdo principal */
+main {
+  padding: 1rem;
+}
+
+/* Ilha flutuante */
+main .island {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 82dvh;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Secundary-color, #ffffff);
+  box-shadow: 2px 2px 2px 2px rgba(189, 78, 78, 0.354);
+}
+
+/* Remove a scrollbar (Chrome, Safari, Edge moderno) */
+main .island::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ícone de perfil */
+.Menu_profile-icon {
+  width: 80px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.Menu_profile-icon img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
