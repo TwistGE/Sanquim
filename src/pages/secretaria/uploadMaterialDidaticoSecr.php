@@ -6,33 +6,37 @@
   <title>Professor | Upload de Material didático</title>
   
   <link rel="stylesheet" href="../../styles/Mprofessores.css">
+   <link rel="stylesheet" href="../../styles/uploadMaterial.css">
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
       <?php include '../../Headers/Msecretaria.html'; ?>
 
-  <main style="padding:20px;">
-    <h2>Upload de Material Didático</h2>
+  <main>
+    <div class="island material">
 
-    <form id="uploadForm">
-      <label for="professorName">Nome do Professor:</label><br />
-      <input type="text" id="professorName" name="professorName" placeholder="Seu nome" required /><br /><br />
-
-      <label for="disciplina">Disciplina:</label><br />
-      <select id="disciplina" name="disciplina" required>
-        <option value="">-- Selecione a disciplina --</option>
-        <option value="matematica">Matemática</option>
-        <option value="portugues">Português</option>
-        <option value="historia">História</option>
-        <option value="ciencias">Ciências</option>
-      </select><br /><br />
-
-      <label for="materialFile">Escolha o arquivo (PDF, DOC, PPT):</label><br />
-      <input type="file" id="materialFile" name="materialFile" accept=".pdf,.doc,.docx,.ppt,.pptx" required /><br /><br />
-
-      <button type="submit">Enviar Material</button>
-    </form>
-
+      <h2>Upload de Material Didático</h2>
+      
+      <form id="uploadForm">
+        <label for="professorName">Nome do Professor:</label><br />
+        <input type="text" id="professorName" name="professorName" placeholder="Seu nome" required /><br /><br />
+        
+        <label for="disciplina">Disciplina:</label><br />
+        <select id="disciplina" name="disciplina" required>
+          <option value="">-- Selecione a disciplina --</option>
+          <option value="matematica">Matemática</option>
+          <option value="portugues">Português</option>
+          <option value="historia">História</option>
+          <option value="ciencias">Ciências</option>
+        </select><br /><br />
+        
+        <label for="materialFile">Escolha o arquivo (PDF, DOC, PPT):</label><br />
+        <input type="file" id="materialFile" name="materialFile" accept=".pdf,.doc,.docx,.ppt,.pptx" required /><br /><br />
+        
+        <button type="submit">Enviar Material</button>
+      </form>
+    </div>
+      
     <section id="resultado" style="margin-top:20px; display:none; border:1px solid #000; padding:15px; max-width:500px;">
       <h3>Material enviado com sucesso!</h3>
       <p><strong>Professor:</strong> <span id="resProfessor"></span></p>
