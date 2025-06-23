@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sanquim | Histórico de Aulas</title>
   <link rel="stylesheet" href="../../styles/Mprofessores.css" />
+    <link rel="stylesheet" href="../../styles/historicoAula.css" />
   <script src="https://kit.fontawesome.com/b2800b7110.js" crossorigin="anonymous" defer></script>
   <style>
     .aula-concluida {
@@ -21,24 +22,27 @@
 <body>
   <?php include '../../Headers/Msecretaria.html'; ?>
 
-  <main style="padding: 20px;">
-    <h1>Histórico de Aulas</h1>
+   <main>
+    <div class="historico island">
 
-    <div>
-      <label for="turma">Turma:</label>
-      <select id="turma">
-        <option value="">-- Selecione uma turma --</option>
-        <option value="1A">1º Informática A</option>
-        <option value="2B">2º Enfermagem B</option>
-      </select>
-
-      <label for="materia">Matéria:</label>
-      <select id="materia">
-        <option value="">-- Selecione uma matéria --</option>
-      </select>
+      <h1>Histórico de Aulas</h1>
+      
+      <div class="historico-select">
+        <label for="turma">Turma:</label>
+        <select id="turma" >
+          <option value="">-- Selecione uma turma --</option>
+          <option value="1A">1º Informática A</option>
+          <option value="2B">2º Enfermagem B</option>
+        </select>
+        
+        <label for="materia">Matéria:</label>
+        <select id="materia">
+          <option value="">-- Selecione uma matéria --</option>
+        </select>
+      </div>
     </div>
 
-    <div id="aulasContainer" style="margin-top: 30px;">
+    <div id="aulasContainer" class="island">
       <!-- Aulas exibidas aqui -->
     </div>
   </main>
@@ -91,7 +95,6 @@
       aulasFicticias.forEach((aula, index) => {
         const divAula = document.createElement("div");
         divAula.classList.add("aula");
-        divAula.style.marginBottom = "20px";
 
         const aulaItem = document.createElement("div");
         aulaItem.classList.add("aula-item");
