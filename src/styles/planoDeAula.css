@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+ :root{
+  --Primary-color:  #FFC544;
+  --Primary-color-border:  rgb(0, 0, 0);
+  --Secundary-color:#FFD984;
+  --Tertiary-color: #379090;
+
+  --FontSizeMenu: 1rem;
+}
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+  }
+main{
+  margin: 1rem;
+  height: 75dvh;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+  .colum1{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 35%;
+  height: 100%;
+}
+
+.colum2{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 112%;
+  width: 100%;
+  height: 100%;
+}
+
+.island{
+  border-radius: 1rem;
+  display: flex;
+  background-color: var(--Secundary-color);
+  box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.354);
+  height: 100%;
+}
+  main .planos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100%;
+  }
+  main .planos-select{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+  }
+    main .planos-select > *{
+      text-align: center;
+    }
+
+#formPlano{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#formPlano .content{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+#formPlano button{
+  color: #fff;
+  width: 50%;
+  padding: 1rem;
+  font-weight: 700;
+  text-align: center;
+  align-self: center;
+  border-radius: 8px;
+  background-color: var(--Tertiary-color);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+main h1{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.colum2 #listaPlanos{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
