@@ -20,7 +20,6 @@ Estrutura 100% tela sem quebrar =
   body{
     display: grid;
     grid-template-rows: auto 1fr;
-
   }
 
   main {

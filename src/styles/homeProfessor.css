@@ -14,7 +14,9 @@
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
   }
-
+  header{
+    z-index: 1000;
+  }
   main{
     max-width: 100dvw;
     height: 86dvh;
@@ -133,7 +135,6 @@
     align-items: center;
     padding: .6rem;
     gap: .5rem;
-    position: relative;
     cursor: pointer;
      text-decoration: none; 
   color: inherit
